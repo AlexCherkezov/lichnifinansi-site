@@ -1,0 +1,12 @@
+{
+  "hash": "be8351648c5534dd505b120a6dcb7ebb",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: DCA Калкулатор (Пример)\n---\n\n\n\nТук е базов пример за симулация на Dollar-Cost Averaging.  \n(В бъдеще можеш да добавиш входове от потребителя и повече опции.)\n\n\n::: {#57126c9d .cell execution_count=1}\n\n::: {.cell-output .cell-output-display}\n![](dca_files/figure-html/cell-2-output-1.png){width=583 height=431}\n:::\n:::\n\n\n",
+    "supporting": [
+      "dca_files\\figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

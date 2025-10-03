@@ -1,0 +1,36 @@
+project:
+  type: website
+
+website:
+  title: "Лични Финанси"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Начало"
+      - href: dca.qmd
+        text: "DCA Калкулатор"
+      - href: about.qmd
+        text: "За мен"
+  page-footer:
+    left: "© Лични Финанси"
+    right: "⚠️ Не е инвестиционен съвет"
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: false
+    smooth-scroll: true
+    css: styles.css
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  daemon: false
+  freeze: false

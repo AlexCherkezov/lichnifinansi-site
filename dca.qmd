@@ -1,0 +1,32 @@
+# DCA Калкулатор (Пример)
+
+Тук е базов пример за симулация на Dollar-Cost Averaging.  
+(В бъдеще можеш да добавиш входове от потребителя и повече опции.)
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+# настройки
+months = 60              # 5 години
+monthly_invest = 100     # вноска
+growth_rate = 0.005      # ~0.5% месечно = ~6% годишно
+
+# сметки
+values = []
+total_invested = 0
+portfolio = 0
+
+for m in range(months):
+    portfolio = (portfolio + monthly_invest) * (1 + growth_rate)
+    total_invested += monthly_invest
+    values.append(portfolio)
+
+# графика
+plt.plot(values, label="Портфейл стойност")
+plt.axhline(total_invested, color="red", linestyle="--", label="Общо внесено")
+plt.legend()
+plt.title("DCA симулация - 100 лв/месец за 5 години при 6% годишно")
+plt.show()
+```
