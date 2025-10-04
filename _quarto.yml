@@ -1,16 +1,19 @@
 project:
   type: website
+  output-dir: docs   # за GitHub Pages (main / docs)
 
 website:
   title: "Лични Финанси"
   navbar:
     left:
       - href: index.qmd
-        text: "Начало"
+        text: "🏠 Начало"
+      - href: annuity.qmd
+        text: "🏦 Анюитетен Калкулатор"
       - href: dca.qmd
-        text: "DCA Калкулатор"
+        text: "📈 DCA Калкулатор"
       - href: about.qmd
-        text: "За мен"
+        text: "ℹ️ За мен"
   page-footer:
     left: "© Лични Финанси"
     right: "⚠️ Не е инвестиционен съвет"
@@ -25,8 +28,18 @@ format:
     css: styles.css
     include-in-header:
       text: |
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3M2FF0RHTV');
+        </script>
 
 execute:
   echo: false
